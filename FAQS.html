@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: rgb(0, 60, 255);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .menu-btn {
+            display: none; /* Oculta el botón de menú en pantallas grandes */
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu a {
+            padding: 10px 15px;
+        }
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block; /* Muestra el botón de menú en pantallas pequeñas */
+            }
+            .menu {
+                display: none; /* Oculta el menú en pantallas pequeñas */
+                flex-direction: column;
+                width: 100%;
+            }
+            .menu a {
+                padding: 10px;
+                text-align: center;
+                background-color: rgb(73, 156, 211);
+            }
+        }
+        .content {
+            padding: 20px;
+        }
+        .faq-section {
+            padding: 20px 0;
+        }
+        .faq-section h1 {
+            border-bottom: 2px solid #88b;
+            padding-bottom: 10px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h2 {
+            font-size: 18px;
+            color: #88b;
+        }
+        .faq-item p {
+            font-size: 16px;
+        }
+        .payment-options img {
+            width: 50px;
+            margin: 10px 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>Keyboard Store</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="index.html"><button>inicio</button></a>
+            <a href="productos.html"><button>Producto</button></a>
+            <a href="FAQS.html"><button>FAQS</button></a>
+            <a href="contacto.html"><button>contacto</button></a>
+            <a href="devolucion.html"><button>devolucion</button></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="faq-section">
+            <h1>Preguntas frecuentes</h1>
+
+            <div class="faq-item">
+                <h2>¿Cuáles son los horarios de apertura del local (Libertad 1021 CABA)?</h2>
+                <p>Estamos de lunes a viernes de 9 a 17:30 hs</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Qué formas de pago puedo aprovechar para realizar mi compra?</h2>
+                <p>Podes pagar como quieras dentro de Mercado Pago:</p>
+                <div class="payment-options">
+                    <img src="Metodos-de-pago-incredible-peru-travel.png" alt="pago" style="width:300px;">
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Cuál es el costo de envío?</h2>
+                <p>El costo de envío será mostrado en base al total de la compra y ubicación, en el checkout, en el momento previo a la compra.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Dónde puedo recibir mi pedido?</h2>
+                <p>Realizamos envíos a todo el país.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Cuánto tarda en llegar el pedido?</h2>
+                <p>El tiempo de entrega dependerá del tipo de envío seleccionado. En general la demora se encuentra entre 3 y 7 días hábiles luego de acreditado el pago.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
